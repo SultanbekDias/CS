@@ -130,3 +130,154 @@ def twenty_second_task():
         return 'Пройдет'
     else:
         return 'Не пройдет'
+
+from math import sqrt
+
+
+def twelfth_task():              # Цикл с постусловием
+    q = float(input('Введите Q: '))
+
+    s = 0
+    i = 1
+
+    while True:
+        s = s + i
+        i += 1
+
+        if s > q:
+            break
+    return f'i - 2 = {i - 2}'
+
+
+def thirteenth_task():
+    n, i, s = 3, 1, 0
+
+    while True:
+        s = s + (3 * i + 2)
+        i += 1
+
+        if not i <= n:
+            break
+    return f'S = {s}'
+    from math import sqrt
+
+
+def ninth_tack():                # Цикл с предусловием
+    a = float(input('Введите А: '))
+    b = float(input('Введите В: '))
+
+    while a != b:
+        if a > b:
+            a = a - b
+        else:
+            b = b - a
+    else:
+        return f'A = {a}'
+
+
+def tenth_tack():
+    n = float(input('Введите N: '))
+
+    s = 0
+    i = 1
+    while i <= n:
+        s = s + i
+        i = i + 2
+    else:
+        return f'S = {s}'
+
+
+def eleventh_task():
+    i = 0
+    i += 1
+    p = 1
+    while p <= 30:
+        p = p * i
+        i += 1
+    else:
+        return f'i = {i}'
+        from math import sqrt
+
+
+def fifth_task():                  # Разветвляющийся алгоритм
+
+    x = float(input('Введите X: '))
+
+    if x >= 0:
+        y = sqrt(x)
+    else:
+        y = x**2
+    return f'X = {x} | Y = {y}'
+
+
+def sixth_task():
+    a = float(input('Введите А: '))
+    b = float(input('Введите В: '))
+    c = float(input('Введите C: '))
+    d = b**2 - 4 * a * c
+    if d >= 0:
+        x1 = ((-b - sqrt(d)) / (2 * a))
+        x2 = ((-b + sqrt(d)) / (2 * a))
+        return f'X1 = {x1} | X2 = {x2}'
+    else:
+        return 'Нет решения'
+
+
+def seventh_task():
+    x = float(input('Введите X: '))
+    y = float(input('Введите Y: '))
+
+    if x == 0:
+        return '[Error] division by zero'
+    else:
+        z = y / x
+        return f'X = {x} | Y = {y} | Z = {z}'
+
+
+def eight_task():
+    a = float(input('Введите А: '))
+    b = float(input('Введите В: '))
+
+    s = a * b
+    if s > 500:
+        s = s * 0.9
+        return f'S = {s}'
+    else:
+        return f'S = {s}'
+        from math import sqrt
+
+
+def first_task():
+    a = float(input('Введите А: '))
+    b = float(input('Введите В: '))
+
+    c = a
+    a = b
+    b = c
+    return f'A = {a} | B = {b}'
+
+
+def second_task():
+    a = float(input('Введите А: '))
+    b = float(input('Введите В: '))
+
+    y = sqrt(a**2 + b**2)
+    p = y + a + b
+    return f'P = {p}'
+
+
+def third_task():
+    a = float(input('Введите А: '))
+    b = float(input('Введите В: '))
+    c = float(input('Введите C: '))
+    s = a + b
+    s = s + c
+    return f'S = {s}'
+
+
+def fourth_task():
+    a = float(input('Введите А: '))
+    b = float(input('Введите В: '))
+
+    g = sqrt(a * b)
+    return f'G = {g}'
