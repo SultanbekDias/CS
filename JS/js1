@@ -1,0 +1,13 @@
+var counter=0;
+function onclickbutton(el) {
+	counter++;
+	el.innerhtml="вы  нажали на кнопку:"+counter;
+	// el.style.background = "red";
+	// el.style.color = "blue";
+	el.style.cssText="border-radius:5px; border:0; font-size: 20px";
+}
+ function onInput(el){
+ 	if(el.value=="Hello")
+ 		alert("I tebe privet!");
+ 	console.log(el.value);
+ }
