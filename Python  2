@@ -1,0 +1,149 @@
+def task_if_1():
+    user_data = int(input("Введите число: "))
+    isHappy = True
+
+    if isHappy or user_data == 6:
+        print("User is happy")
+    elif user_data == 5:
+        print("Number is 5")
+    elif user_data == 7:
+        print("Number is 7")
+    else:
+        print("User is unhappy")
+
+    if user_data != 5:
+        print("Мы на месте")
+        if user_data > 6:
+            print("Number is bigger than 5")
+
+
+def task_if_2():
+    data = input()
+    number = 5 if data == "Five" else 0
+    print(number)
+
+
+def task_if_3():
+    a = int(input('Введите А: '))
+    b = int(input('Введите В: '))
+
+    if a % 2 == 0:
+        print(f'Число {a} (A) является четным')
+    elif b % 2 == 0:
+        print(f'Число {b} (B) является четным')
+    else:
+        print('Оба числа не являются четными')
+
+
+def task_if_4():
+    a = int(input('введите число A:'))
+    char = input('Введите знак операции:')
+    b = int(input('введите число A:'))
+
+    if char == '+':
+        print(f'{a} + {b} = {a + b}')
+    elif char == '-':
+        print(f'{a} - {b} = {a - b}')
+    elif char == '/':
+        if b != 0: print(f'{a} / {b} = {a / b}')
+    elif char == '*':
+        print(f'{a} * {b} = {a * b}')
+    else:
+        print('Неизвестная операция.')
+
+
+def task_if_5():
+    var = 14
+
+    if 10 < var <= 15 and var != 12 or var == 18:
+        print(True)
+    else:
+        print(False)
+        def task2_1():
+    number = 5
+    digit = 4.54356876
+    word = 'Result'
+    boolean = True
+
+    str_num = '5'
+    print(word + ': ' + str(number + int(str_num)))
+    del number
+    number = 7
+    print(f'{word}:', number)
+
+
+def task2_2():
+    num1 = int(input("Введите первое число: "))
+    num2 = int(input("Введите второе число: "))
+    num1 *= 5
+
+    print("Result(+):", num1 + num2)
+    print("Result(-):", num1 - num2)
+    print("Result(/):", num1 / num2)
+    print("Result(*):", num1 * num2)
+    print("Result(**):", num1 ** num2)
+    print("Result(//):", num1 // num2)
+    print("Result(%):", num1 % num2)
+
+    word = "Hi"
+    print(word * 2)
+    word = True
+
+
+def task2_3():
+    name = input('Введите фамилию:')
+    print(name*3)
+
+
+def task2_4():
+    a = float(input('Введите А: '))
+    b = float(input('Введите В: '))
+    c = float(input('Введите C: '))
+
+    print(f'Сумма: {a+b+c} \nВычитание: {a - b -c} \nДеление: {a / b / c} \n'
+          f'Умножение: { a * b *c } \nОстаток при делении: {a % b % c}')
+
+
+def task2_5():
+    integer = 5
+    digit = 5.12
+    str_num = '10'
+
+    print(f'Result: {int(integer) * int(digit) * int(str_num)}')
+    import random
+
+
+def black_jack():
+    deck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] * 4
+    random.shuffle(deck)
+
+    print('Поиграем в Black Jack')
+    counter = 0
+
+    for i in range(2):
+        current = deck.pop()
+        print(f'Выдана карта с номиналом: {current}')
+        counter += current
+
+    while True:
+        if counter < 21:
+            search = input(f'У вас сейчас {counter} очков\nЖелаете взять карту?( Да | Нет )')
+            search = search.lower()
+
+            if search == 'да':
+                current = deck.pop()
+                print(f'Выдана карта с номиналом: {current}')
+                counter += current
+            elif search == 'нет':
+                print(f'Ваши очки = {counter}. До 21 не хватило {21 - counter} очков')
+                break
+            else:
+                print('[INFO] неизвестная команда')
+        elif counter == 21:
+            print('Поздравляю Вы победили!')
+            break
+
+        elif counter > 21:
+            print(f'Вы проиграли!!!\nКоличество ваших очков = {counter}')
+            break
+    print('Игра завершена!!!')
